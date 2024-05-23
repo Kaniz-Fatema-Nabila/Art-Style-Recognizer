@@ -1,6 +1,6 @@
 ---
 title: Art Style Recognizer
-layout: Page
+layout: page
 ---
 
 # Image Recognizer
