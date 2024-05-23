@@ -1,12 +1,13 @@
 ---
-title: Art Style Recognizer
+title: Image Recognizer
 layout: page
 ---
 
-# Image Recognizer
+# Art Style Recognizer
 
 Can classify 10 different types of art styles <br/>
 The types are following: <br/>
+
 1. Art Nouveau
 2. Constructivism Art
 3. Cubism Art
