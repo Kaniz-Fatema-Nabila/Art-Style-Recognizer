@@ -8,42 +8,34 @@ layout: page
 
 <body>
     <p>Upload an image to recognize its art style</p>
-    <input type="file" id="fileInput" accept="image/*">
+    <input type="file" id="photo" accept="image/*">
     <img id="preview" src="" alt="Image preview">
-    <button id="submitBtn">Submit</button>
     <h3>Prediction:</h3>
     <pre id="result"></pre>
 
     <script type="module">
-        import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client@latest/+esm";
+        import { client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.1.4/dist/index.min.js";
 
-        document.getElementById('fileInput').addEventListener('change', (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('preview').src = e.target.result;
-                }
-                reader.readAsDataURL(file);
-            }
-        });
-
-        document.getElementById('submitBtn').addEventListener('click', async () => {
-            const fileInput = document.getElementById('fileInput');
-            if (!fileInput.files.length) {
-                alert('Please select an image file first.');
-                return;
-            }
-
-            const file = fileInput.files[0];
+        async function loaded(reader) {
             const client = await Client.connect("waddaheaven/artStyle_recognizer");
+            const response = await app.predict("/predict", [reader.result]);
+            const label = response['data'][0]['label'];
+            results.innerHTML = `Predicted result: <b>${label}</b>`;
+            imagePreview.src = reader.result;
+        }
 
-            const result = await client.predict("/predict", { 
-                image: file
-            });
+        function read() {
+            const reader = new FileReader();
+            reader.addEventListener('load', () => loaded(reader))
+            reader.readAsDataURL(photo.files[0]);
+        }
 
-            document.getElementById('result').textContent = JSON.stringify(result.data, null, 2);
-        });
+        const photo = document.getElementById('photo');
+        const results = document.getElementById('result');
+        const imagePreview = document.getElementById('preview');
+
+        photo.addEventListener('input', read);
     </script>
+
 </body>
 </html>
