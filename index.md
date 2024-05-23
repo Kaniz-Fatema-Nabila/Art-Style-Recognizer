@@ -3,7 +3,7 @@ title: Image Recognizer
 layout: page
 ---
 
-# Art Style Recognizer
+### Art Style Recognizer
 
 Can classify 10 different types of art styles <br/>
 The types are following: <br/>

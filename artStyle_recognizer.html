@@ -6,30 +6,14 @@ layout: page
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        img {
-            max-width: 300px;
-            margin: 20px 0;
-        }
-    </style>
-</head>
+
 <body>
     <h1>Art Style Recognizer</h1>
     <p>Upload an image to recognize its art style</p>
     <input type="file" id="fileInput" accept="image/*">
     <button id="submitBtn">Submit</button>
     <img id="preview" src="" alt="Image preview">
-    <h3>Prediction:</h3>
+    <h3>Prediction</h3>
     <pre id="result"></pre>
 
     <script type="module">
