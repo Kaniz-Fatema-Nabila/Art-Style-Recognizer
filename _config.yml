@@ -2,7 +2,7 @@ remote_theme: daattali/beautiful-jekyll@master
 plugins:
 - jekyll-remote-theme 
 
-title: Art Style Recognizer
+title: Art Style Recognizer (artStyle_recognizer.html)
 description: An image classification API that classifies 10 different types of Art Styles around the world.
 
 author: Kaniz Fatema Nabila
