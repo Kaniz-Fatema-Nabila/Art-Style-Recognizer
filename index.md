@@ -18,3 +18,6 @@ The types are following: <br/>
 8. Pointillism Art
 9. Pop Art
 10. Prehistoric Art
+
+
+[Art Style Recognizer](artStyle_recognizer.html)
