@@ -1,4 +1,4 @@
-Download extracted data from here `https://drive.google.com/drive/folders/1Iivpw6lPmMM4d_91ZbsCFPnEWoAj7lZy?usp=sharing`<br/>
+Download extracted data from [here](https://drive.google.com/drive/folders/1Iivpw6lPmMM4d_91ZbsCFPnEWoAj7lZy?usp=sharing)<br/>
 
 10 types of art styles are available here. The types are as follows: <br/>
 1. Art Nouveau
