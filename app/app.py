@@ -20,8 +20,8 @@ def recognize_image(image):
     _, _, probs = model.predict(image)
     return dict(zip(art_labels, map(float, probs)))
 
-image = gr.Image()
-label = gr.Label()
+image = gr.inputs.Image()
+label = gr.outputs.Label()
 example = [
     'Art Nouvaeu.jpg',
     'Constructivism art.jpg',
@@ -31,4 +31,4 @@ example = [
 ]
 
 iface = gr.Interface(fn = recognize_image, inputs= image, outputs = label, examples = example)
-iface.launch(inline=False)
+iface.launch(inline=False, share=True)
