@@ -23,11 +23,11 @@ def recognize_image(image):
 image = gr.inputs.Image()
 label = gr.outputs.Label()
 example = [
-    'Art Nouvaeu.jpg',
-    'Constructivism art.jpg',
-    'Fauvism art.jpg',
-    'Gothic art.jpeg',
-    'Minimalistic art.jpg' 
+    'nouvaeu.jpg',
+    'constructivism.jpg',
+    'fauvism.jpg',
+    'gothic.jpeg',
+    'minimalistic.jpg' 
 ]
 
 iface = gr.Interface(fn = recognize_image, inputs= image, outputs = label, examples = example)
