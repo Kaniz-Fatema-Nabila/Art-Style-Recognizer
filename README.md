@@ -26,7 +26,8 @@ You can check the data training and cleaning process in `notebooks/training_and_
 
 ## Model Deployment
 I deployed the model to the HuggingFace Spaces Gradio App. The implementation can be found in the `deployment` folder or [here](https://huggingface.co/spaces/waddaheaven/artStyle_recognizer)<br/>
-<img src = "deployment/gradio_app.png" width="600" height="300">
+
+<img src = "deployment/gradio_app.png" width="1200" height="500">
 
 ## API integration with GitHub Pages
 The deployed model API is integrated [here](https://kaniz-fatema-nabila.github.io/Art-Style-Recognizer/) in the GitHub Pages Website.<br/>
